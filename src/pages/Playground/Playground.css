@@ -1,0 +1,61 @@
+.playground-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .playground-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.playground-card {
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.playground-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.playground-card > p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.demo-area {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border-color);
+}
+
+.user-list {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .user-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.user-list-item {
+  background: var(--background-color);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.user-list-item span {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
