@@ -28,20 +28,21 @@ const Playground = () => {
 
   return (
     <div className="playground-page animate-fade-in">
-      <header className="page-header">
+      <header className="page-header playground-header">
         <div className="container">
-          <h1>
-            <a className="gradient-text " href="https://stackblitz.com/edit/vitejs-vite-peherbxr?file=index.html&terminal=dev" target='_blank'> <span
-              style={{
-                cursor: 'pointer',
-                textDecoration: 'underline',
-                fontSize: '1rem',
-                fontWeight: '500',
-                verticalAlign: 'middle',
-                marginRight: '0.5rem'
-              }}>Click to Visit</span> Interactive Playground </a>
-          </h1>
-          <p>Experiment with React hooks and concepts in real-time.</p>
+          <h1 className="gradient-text">Interactive Playground</h1>
+          <p>Experiment with React hooks and concepts in real-time or launch our full online sandbox environment.</p>
+          
+          <div className="playground-cta-wrapper">
+            <a 
+              href="https://stackblitz.com/edit/vitejs-vite-peherbxr?file=index.html&terminal=dev" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-primary playground-launch-btn"
+            >
+              <span className="btn-icon">⚡</span> Explore the Code Playground
+            </a>
+          </div>
         </div>
       </header>
 

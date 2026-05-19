@@ -9,6 +9,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 // Pages
 import Home from './pages/Home/Home';
 import Modules from './pages/Modules';
+import ModuleDetail from './pages/ModuleDetail/ModuleDetail';
+import LabDetail from './pages/LabDetail/LabDetail';
 import Labs from './pages/Labs/Labs';
 import Playground from './pages/Playground/Playground';
 import Quiz from './pages/Quiz/Quiz';
@@ -28,7 +30,9 @@ function App() {
             {/* Public Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/modules" element={<Modules />} />
+            <Route path="/modules/:id" element={<ModuleDetail />} />
             <Route path="/labs" element={<Labs />} />
+            <Route path="/labs/:id" element={<LabDetail />} />
             <Route path="/playground" element={<Playground />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/resources" element={<Resources />} />

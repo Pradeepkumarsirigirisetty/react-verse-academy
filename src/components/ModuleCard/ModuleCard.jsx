@@ -1,13 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as Icons from 'react-icons/fa';
 import './ModuleCard.css';
 
 const ModuleCard = ({ module }) => {
+  const navigate = useNavigate();
   // Dynamically render icon based on string name from mock data
   const IconComponent = Icons[module.icon] || Icons.FaBook;
 
+  const handleClick = () => {
+    navigate(`/modules/${module.id}`);
+  };
+
   return (
-    <div className="module-card glass">
+    <div className="module-card glass" onClick={handleClick} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && handleClick()}>
       <div className="module-card-header">
         <div className="module-icon-wrapper">
           <IconComponent className="module-icon" />
@@ -25,6 +31,9 @@ const ModuleCard = ({ module }) => {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="module-card-cta">
+        <span>Start Reading <Icons.FaArrowRight className="cta-arrow" /></span>
       </div>
     </div>
   );
